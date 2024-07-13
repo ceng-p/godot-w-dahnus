@@ -2,9 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://c1ibi8rrfnrkm" path="res://assets/sprites/SNOWMAN.png" id="1_c1hh1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_elppu"]
-size = Vector2(8, 8.5)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_23mid"]
 atlas = ExtResource("1_c1hh1")
 region = Rect2(0, 0, 16, 16)
@@ -27,13 +24,21 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="Snowman" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elppu"]
+size = Vector2(7, 13.5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3.25)
-shape = SubResource("RectangleShape2D_elppu")
+[node name="Snowman" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sfq2x")
 autoplay = "default"
-frame_progress = 0.83019
+frame_progress = 0.179788
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.521
+one_shot = true
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.75)
+shape = SubResource("RectangleShape2D_elppu")

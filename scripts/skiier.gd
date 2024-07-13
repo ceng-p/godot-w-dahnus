@@ -6,7 +6,8 @@ const JUMP_VELOCITY = -200.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+var health = 100
+@onready var progress_bar = $ProgressBar
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -24,5 +25,12 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
 
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		print("Collided with: ", collision.get_collider().name)
+		if collision.get_collider().name == "Snowman":
+			progress_bar.value -= 10
+	
 	move_and_slide()
