@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://k3qi7d8nmgsg"]
+
+[ext_resource type="Texture2D" uid="uid://c1ibi8rrfnrkm" path="res://assets/sprites/SNOWMAN.png" id="1_c1hh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elppu"]
+size = Vector2(8, 8.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23mid"]
+atlas = ExtResource("1_c1hh1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cn5pu"]
+atlas = ExtResource("1_c1hh1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sfq2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23mid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cn5pu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Snowman" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.25)
+shape = SubResource("RectangleShape2D_elppu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_sfq2x")
+autoplay = "default"
+frame_progress = 0.83019
