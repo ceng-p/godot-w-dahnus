@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://iusy61oedpo1"]
+
+[ext_resource type="PackedScene" uid="uid://cupjgtesx5p0e" path="res://sceenes/player.tscn" id="1_hn3d6"]
+[ext_resource type="PackedScene" uid="uid://c1rjxc0acdj5d" path="res://sceenes/skiier.tscn" id="2_ett55"]
+[ext_resource type="Script" path="res://scripts/skiier.gd" id="3_7bg3x"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_be0d1"]
+distance = -38.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_hn3d6")]
+position = Vector2(162, 414)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(168, 412)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(169, 404)
+shape = SubResource("WorldBoundaryShape2D_be0d1")
+
+[node name="Skiier" parent="." instance=ExtResource("2_ett55")]
+position = Vector2(114, 404)
+script = ExtResource("3_7bg3x")
