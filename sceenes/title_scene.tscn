@@ -1,15 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://hg30p5cefow1"]
+[gd_scene load_steps=3 format=3 uid="uid://hg30p5cefow1"]
 
 [ext_resource type="Script" path="res://scripts/title_scene.gd" id="1_rfo05"]
+[ext_resource type="Texture2D" uid="uid://c7r400ralp55t" path="res://assets/backgrounds/title screen.png" id="2_6me8x"]
 
-[node name="Title Scene" type="Control"]
+[node name="Title Screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 12.0
+offset_right = 42.0
+offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rfo05")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -60.0
+offset_right = 96.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6me8x")
+metadata/_edit_use_anchors_ = true
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
