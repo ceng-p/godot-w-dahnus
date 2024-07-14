@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://hg30p5cefow1"]
+
+[ext_resource type="Script" path="res://scripts/title_scene.gd" id="1_rfo05"]
+
+[node name="Title Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rfo05")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 105.0
+offset_right = 796.0
+offset_bottom = 252.0
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 400.0
+offset_right = 800.0
+offset_bottom = 546.0
+text = "Quit"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://k3qi7d8nmgsg" path="res://sceenes/snowman.tscn" id="4_x7bwb"]
 [ext_resource type="Texture2D" uid="uid://bikxmxsbo5xy3" path="res://assets/sprites/world_tileset.png" id="5_vlffq"]
 [ext_resource type="Script" path="res://scripts/snowman.gd" id="5_wkknd"]
-[ext_resource type="Script" path="res://sceenes/WorldEnvironment.gd" id="6_dvke4"]
+[ext_resource type="Script" path="res://scripts/WorldEnvironment.gd" id="6_dvke4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qvkj"]
 texture = ExtResource("5_vlffq")
