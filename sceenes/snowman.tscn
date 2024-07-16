@@ -34,11 +34,6 @@ sprite_frames = SubResource("SpriteFrames_sfq2x")
 autoplay = "default"
 frame_progress = 0.179788
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 4.521
-one_shot = true
-autostart = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.75)
 shape = SubResource("RectangleShape2D_elppu")
